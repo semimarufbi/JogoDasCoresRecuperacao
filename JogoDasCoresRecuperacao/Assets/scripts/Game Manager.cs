@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     int[] sequencia = new int[0];
 
     [SerializeField]
-    string[] nomes = new string[8];
+    string[] nomes = new string[7];
 
 
     private void Start()
