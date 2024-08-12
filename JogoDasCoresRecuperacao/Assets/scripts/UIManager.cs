@@ -27,7 +27,7 @@ public class UIManager : MonoBehaviour
         for (int i = 0; i < botoes.Length; i++)
         {
             int x = i;
-            botoes[i].onClick.AddListener (() => GameManager.instance.checarcor(x));
+            botoes[i].onClick.AddListener (() => .instance.checarcor(x));
         }
     }
    public void AtualizarAcertos(int x)
