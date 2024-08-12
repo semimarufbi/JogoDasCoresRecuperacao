@@ -30,15 +30,18 @@ public class UIManager : MonoBehaviour
             botoes[i].onClick = GameManager.instance.checarcor(x);
         }
     }
-    void AtualizarAcertos(int x)
+   public void AtualizarAcertos(int x)
     {
         acertouTexto.text = x.ToString();
     }
-    void AtualizarErros(int x)
+    public void AtualizarErros(int x)
     {
         errouTexto.text = x.ToString();
     }
-
+ public void LimparTexto()
+    {
+        sequenciaTexto.text = string.Empty;
+    } 
     
 
 
