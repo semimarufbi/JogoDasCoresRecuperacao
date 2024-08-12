@@ -27,12 +27,12 @@ public class GameManager : MonoBehaviour
     {
     corDaVez = 0;
     sequencia[0] = Random.Range(3, nomes.Length);
-    LimparTexto();
+        LimparTexto();
 
     for (int i = 1; i < sequencia.Length; i++) 
        {
             sequencia[i] = Random.Range(0, nomes.Length);
-            AtuaLizarSequencia(nomes[sequencia]);
+            AtualizarSequencia(nomes[sequencia]);
         }
     }
     public void ChecarCor(int corIndex) 
