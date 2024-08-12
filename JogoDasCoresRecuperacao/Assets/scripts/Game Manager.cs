@@ -5,13 +5,18 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     #region Singleton
+    static public GameManager Instance;
+    private void Awake()
+    {
+        Instance = this;
+    }
+    #endregion
     int corDaVez, acertos, erros;
     int[] sequencia = new int[0];
 
     [SerializeField]
     string[] nomes = new string[8];
 
-    #endregion
 
     private void Start()
     {
