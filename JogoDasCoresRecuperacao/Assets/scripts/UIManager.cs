@@ -32,11 +32,11 @@ public class UIManager : MonoBehaviour
     }
    public void AtualizarAcertos(int x)
     {
-        acertouTexto.text = x.ToString("Acertos");
+        acertouTexto.text = x.ToString();
     }
     public void AtualizarErros(int x)
     {
-        errouTexto.text = x.ToString("Erros");
+        errouTexto.text = x.ToString();
     }
  public void LimparTexto()
     {
@@ -44,7 +44,7 @@ public class UIManager : MonoBehaviour
     } 
     public void AtualizarSequencia(string cor)
     {
-      cor  += sequenciaTexto.text  ;
+      cor  += sequenciaTexto ;
     }
     
 

@@ -1,5 +1,7 @@
+using System.Buffers;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -12,10 +14,10 @@ public class GameManager : MonoBehaviour
     }
     #endregion
     int corDaVez, acertos, erros;
-    int[] sequencia = new int[0];
+    int[] sequencia= new int[8]  ;
 
     [SerializeField]
-    string[] nomes = new string[7];
+    string[] nomes = new string[8];
 
 
     private void Start()
@@ -26,7 +28,7 @@ public class GameManager : MonoBehaviour
     void GerarSequencia() 
     {
     corDaVez = 0;
-    sequencia[0] = Random.Range(3, nomes.Length);
+    sequencia[0] = Random.Range(3,nomes.Length);
          UIManager.Instance.LimparTexto();
 
     for (int i = 1; i < sequencia.Length; i++) 
@@ -35,21 +37,24 @@ public class GameManager : MonoBehaviour
             UIManager.Instance.AtualizarSequencia(nomes[sequencia[i]]);
        }
     }
-    public void ChecarCor(int corIndex) 
-    { 
-        if (corIndex == sequencia[corDaVez]) 
+    public void ChecarCor(int corIndex)
+         
+    {
+
+
+        if (corIndex == sequencia[corDaVez])
         { 
         corDaVez++;
         }
 
-         if(corDaVez == sequencia.Length)
+         else if (corDaVez == sequencia.Length)
         {
             acertos++;
 
             UIManager.Instance.AtualizarAcertos(acertos);
             GerarSequencia();
         }
-        else 
+        else  
         {
             erros++;
             UIManager.Instance.AtualizarErros(erros);
