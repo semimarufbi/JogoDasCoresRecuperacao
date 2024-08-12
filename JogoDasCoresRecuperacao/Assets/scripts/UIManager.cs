@@ -42,9 +42,10 @@ public class UIManager : MonoBehaviour
     {
         sequenciaTexto.text = string.Empty;
     } 
-    public void AtualizarSequencia(string cor)
+  public void AtualizarSequencia(string nomedacor)
     {
-      cor  += sequenciaTexto ;
+        sequenciaTexto.text  += nomedacor ;
+
     }
     
 
