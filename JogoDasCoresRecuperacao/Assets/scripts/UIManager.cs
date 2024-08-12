@@ -30,6 +30,10 @@ public class UIManager : MonoBehaviour
             botoes[i].onClick = GameManager.instance.checarcor(x);
         }
     }
+    void AtualizarAcertos(int x)
+    {
+        acertouTexto.text = x.ToString();
+    }
     
 
 
