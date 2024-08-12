@@ -34,6 +34,11 @@ public class UIManager : MonoBehaviour
     {
         acertouTexto.text = x.ToString();
     }
+    void AtualizarErros(int x)
+    {
+        errouTexto.text = x.ToString();
+    }
+
     
 
 
